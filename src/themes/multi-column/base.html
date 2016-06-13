@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{title}} | {{subTitle}}</title>
+    <meta name="Description" content="{{title}} | {{description}}">
+    <meta name="Keywords" content="{{keywords}}">
+    <meta property="og:title" content="{{title}} | {{subTitle}}">
+    <meta property="og:site_name" content="{{title}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <style>
+    html {
+    width: 100%;
+    height: 100%;
+    }
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    }
+    .column_half {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    }
+    .bold {
+    font-weight: 700;
+    }
+    .large {
+    font-size: 50px;
+    }
+    .medium {
+    font-size: 30px;
+    }
+    .small {
+    font-size: 20px;
+    }
+    .xsmall {
+    font-size: 14px;
+    }
+    .app_image {
+    height: 600px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    }
+    .app_badge {
+    height: 60px;
+    }
+    .app_icon {
+    height: 50px;
+    width: 50px;
+    }
+    .product_header {
+    margin: 0px;
+    }
+    .app_icon_row {
+    width: 66px;
+    height: 50px
+    }
+    .container {
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 450px;
+    width: 100%;
+    }
+    .header_row {
+    padding-top: 0px;
+    }
+    .tagline_row {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    }
+    .app_badge_row {
+    padding-top: 24px;
+    padding-bottom: 0px;
+    }
+    .footer {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    }
+    @media (max-width: 700px) {
+    .app_image {
+    height: 440px;
+    }
+    .footer {
+    position: relative;
+    width: 100%;
+    bottom: auto;
+    right: auto;
+    text-align: center;
+    padding-bottom: 40px
+    }
+    }
+    @media (max-width: 900px) {
+    .large {
+    font-size: 40px;
+    }
+    .medium {
+    font-size: 25px;
+    }
+    .small {
+    font-size: 18px;
+    }
+    .container {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 310px;
+    width: auto;
+    }
+    .center {
+    text-align: center;
+    }
+    .app_badge {
+    height: 40px;
+    }
+    .app_image {
+    height: 440px;
+    }
+    .app_icon_row {
+    width: 56px;
+    height: 40px
+    }
+    .app_icon {
+    height: 40px;
+    width: 40px;
+    }
+    .product_info_row {
+    text-align: center;
+    }
+    .product_header_table {
+    margin: auto;
+    }
+    .header_row {
+    padding-top: 32px;
+    }
+    .tagline_row {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    }
+    .app_badge_row {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
+    }
+    @media (min-width: 700px) {
+    .row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    }
+    .column_half {
+    width: 50%;
+    }
+    body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    }
+    }
+  </style>
+  <body>
+    <div class="row">
+      <div class="column_half" style="background-color:{{mainColor}}">
+        <table class="container">
+          <tr>
+            <td valign="top" class="product_info_row header_row">
+              <table class="product_header_table">
+                <tr>
+                  <td valign="middle" class="app_icon_row">
+                    <img style="vertical-align:middle" class="app_icon" src="./assets/icon_50x50.png">
+                  </td>
+                  <td valign="middle">
+                    <div class="bold large">{{title}}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" class="product_info_row tagline_row">
+              <div class="medium center">{{subTitle}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" class="product_info_row copy_row">
+              <div class="small center" style="color:#696969">{{description}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top" class="product_info_row app_badge_row">
+              {{#if iTunes}}
+              <a href="{{iTunes}}" target="_blank">
+                <img class="app_badge" src="./assets/iTunes.svg">
+              </a>
+              {{/if}}
+              {{#if googlePlay}}
+              <a href="{{googlePlay}}" target="_blank">
+                <img class="app_badge" src="./assets/googlePlay.png">
+              </a>
+              {{/if}}
+              {{#if slack}}
+              <a id="slack-button" href="{{slack}}" target="_bank"><img alt="Add to Slack" height="50" width="180" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x">
+			        </a>
+              {{/if}}
+              {{#if messenger}}
+              <div id="widget" style="display: inline-block; overflow: hidden; text-align: left; white-space: nowrap;"><a target="_blank" href="{{messenger}}" style="min-width: 90px;border-radius: 6px;-webkit-border-radius: 6px;-moz-border-radius: 6px;border: 1px solid #d5d5d5;padding: 6px 6px 6px 0;text-decoration: none; text-shadow: none;margin: 0;display: block;color: #575757;line-height: 24px;font-size: 14px;font-weight: normal;padding-left: 36px; background: url('https://assets.modernapp.co/assets/images/facebook-message-button-icon-white2x.png') no-repeat 5px 6px;background-color: #56b4ff !important;color: white;border-color: #3691da; background-size: 23px 23px;">Facebook Messenger</a></div><script async defer src="https://assets.modernapp.co/assets/js/embed.js"></script>
+              {{/if}}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="column_half" style="background-color:{{secondaryColor}}">
+        <img class="app_image" src="./assets/screenshot.png">
+      </div>
+    </div>
+    <div class="small footer" style="color:#fff;background-color:{{secondaryColor}};">
+      {{#if contactEmail}}
+      <a class="xsmall" style="color:#fff;text-decoration: none;padding-right:16px" href="mailto:{{contactEmail}}" target="_blank">support</a>
+      {{/if}}
+      {{#if twitterHandle}}
+      <a class="xsmall" style="color:#fff;text-decoration: none" href="twitter.com/{{twitterHandle}}" target="_blank">twitter</a>
+      {{/if}}
+    </div>
+  </body>
+</html>

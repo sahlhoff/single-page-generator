@@ -1,0 +1,21 @@
+{
+  "name": "single-page-generator",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "preferGLobal": true,
+  "license": "ISC",
+  "bin": {
+    "test-cli": "index.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "handlebars-precompiler": "2.1.x",
+    "questions": "0.0.x",
+    "ncp": "2.0.x",
+    "inquirer": "1.0.x"
+  }
+}
