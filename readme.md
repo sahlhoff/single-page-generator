@@ -1,7 +1,7 @@
 # Single Page Generator
   CLI tool to generate single page apps
 
-![single-page-generator](https://raw.githubusercontent.com/sahlhoff/single-page-generator/master/examples.png)
+![single-page-generator](https://raw.githubusercontent.com/sahlhoff/single-page-generator/master/example.png)
   
 ## Installation
 
