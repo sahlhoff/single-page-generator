@@ -1,4 +1,4 @@
 node_modules/
 output.html
 *.org
-DS_Store
+.DS_Store
