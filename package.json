@@ -11,6 +11,10 @@
   "bin": {
     "test-cli": "index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahlhoff/single-page-generator.git"
+  },    
   "dependencies": {
     "handlebars": "^4.0.5",
     "handlebars-precompiler": "2.1.x",
