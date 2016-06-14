@@ -5,11 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Chad Sahlhoff",
   "preferGLobal": true,
   "license": "ISC",
   "bin": {
-    "test-cli": "index.js"
+    "single-page-generator": "index.js"
   },
   "repository": {
     "type": "git",
